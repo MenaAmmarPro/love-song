@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#090b20">
+  <meta name="description" content="Our song, and a little player of handmade lullabies — made for Mena.">
+  <title>Our Song ✦ for Mena</title>
+  <link rel="canonical" href="https://ammar49-cyber.github.io/love-song/">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Our Song — for Mena">
+  <meta property="og:title" content="Our Song ✦ for Mena">
+  <meta property="og:description" content="Our song, and a little player of handmade lullabies.">
+  <meta property="og:url" content="https://ammar49-cyber.github.io/love-song/">
+  <meta property="og:image" content="https://ammar49-cyber.github.io/love-song/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Our song - a little player for Mena">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Our Song ✦ for Mena">
+  <meta name="twitter:description" content="Our song, and a little player of handmade lullabies.">
+  <meta name="twitter:image" content="https://ammar49-cyber.github.io/love-song/assets/og-image.png">
+  <link rel="stylesheet" href="css/theme.css">
+  <link rel="stylesheet" href="css/app.css">
+  <script src="js/theme-main.js" defer></script>
+  <script src="js/effects.js" defer></script>
+  <script src="js/music.js" defer></script>
+  <script src="js/tracks-data.js" defer></script>
+  <script src="js/app.js" defer></script>
+  <link rel="manifest" href="manifest.webmanifest">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Our Song">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/icons/icon-192.png">
+</head>
+<body>
+  <canvas id="starfield" aria-hidden="true"></canvas>
+
+  <header class="site-header">
+    <a class="brand" href="index.html">✦ Our Song</a>
+    <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false">Menu</button>
+    <nav class="nav-links" aria-label="Main navigation">
+      <a class="active" href="index.html">Player</a>
+      <a href="#our-song">Our song</a>
+      <a href="#lyrics">Lyrics</a>
+      <a href="https://ammar49-cyber.github.io/loveformymena/">Our little universe ↗</a>
+      <button class="theme-toggle" type="button" aria-label="Toggle color theme">Theme</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero song-hero">
+      <p class="eyebrow">PRESS PLAY, THINK OF US</p>
+      <div class="moon" aria-hidden="true">♪</div>
+      <p class="small-caption">A little music box, just for you.</p>
+      <h1>Our song, <span>Mena.</span></h1>
+      <p class="hero-description">
+        One song that is ours, and a quiet player full of gentle little tunes
+        made here — nothing polished, just warmth.
+      </p>
+      <div class="hero-actions">
+        <a class="button button-primary" href="#player">Open the player <span>♫</span></a>
+        <a class="button button-ghost" href="#our-song">Our song ↗</a>
+      </div>
+      <p class="signature">Made with love, just for you <span>♥</span></p>
+    </section>
+
+    <section class="section" id="our-song">
+      <p class="eyebrow">THE ONE THAT IS OURS</p>
+      <h2>Our <span>song.</span></h2>
+      <div class="song-embed" id="song-embed"></div>
+      <p class="settings-note" id="song-embed-note" aria-live="polite"></p>
+    </section>
+
+    <section class="section" id="player">
+      <p class="eyebrow">LITTLE HANDMADE TUNES</p>
+      <h2>The <span>music box.</span></h2>
+
+      <div class="player-card">
+        <div class="now-playing">
+          <span class="now-label">Now playing</span>
+          <span class="now-title" id="now-title">Nothing yet</span>
+          <span class="now-mood" id="now-mood">Pick a track below ♡</span>
+        </div>
+
+        <canvas id="eq" class="equalizer" width="640" height="90" aria-hidden="true"></canvas>
+
+        <div class="transport">
+          <button class="transport-btn" id="prev" type="button" aria-label="Previous track">⏮</button>
+          <button class="transport-btn transport-main" id="play-toggle" type="button" aria-label="Play">▶</button>
+          <button class="transport-btn" id="next" type="button" aria-label="Next track">⏭</button>
+          <button class="transport-btn" id="shuffle" type="button" aria-label="Shuffle" aria-pressed="false">🔀</button>
+        </div>
+
+        <div class="volume-row">
+          <span aria-hidden="true">🔊</span>
+          <input type="range" id="volume" min="0" max="100" value="50" aria-label="Volume">
+        </div>
+
+        <p class="player-status" id="player-status" aria-live="polite"></p>
+      </div>
+
+      <ul class="song-list" id="song-list"></ul>
+    </section>
+
+    <section class="section" id="lyrics">
+      <p class="eyebrow">WORDS THAT SOUND LIKE US</p>
+      <h2>Lyrics <span>I think of.</span></h2>
+      <div class="lyrics-box" id="lyrics"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Made with care <span>♥</span> for Mena</p>
+    <p class="footer-small">A little universe of its own ✦</p>
+  </footer>
+</body>
+</html>
