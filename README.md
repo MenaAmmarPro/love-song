@@ -3,7 +3,7 @@
 Our song, plus a little music box of handmade lullabies and a space for the
 lyrics that feel like us. Part of the **Love for Mena** collection.
 
-**Live:** https://ammar49-cyber.github.io/love-song/
+**Live:** https://menaammarpro.github.io/love-song/
 
 ## What it does
 
@@ -49,4 +49,4 @@ Static site, deployed with GitHub Pages from `main`.
 ## License
 
 Creative Commons BY-NC-ND 4.0 — see [`LICENSE`](LICENSE).
-© 2026 Ammar (ammar49-cyber). Made with care for Mena.
+© 2026 Ammar (MenaAmmarPro). Made with care for Mena.
