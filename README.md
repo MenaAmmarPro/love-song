@@ -9,7 +9,8 @@ lyrics that feel like us. Part of the **Love for Mena** collection.
 
 - A player for eight generative tracks — every one synthesized live in the
   browser (no audio files), with play/pause, next/prev, shuffle, and volume
-- A "Our song" section that embeds your real song from YouTube
+- A "Our song" section that embeds a song from YouTube (a working placeholder
+  is already set — swap in yours)
 - A Lyrics section
 - Offline-capable PWA
 
@@ -19,6 +20,9 @@ lyrics that feel like us. Part of the **Love for Mena** collection.
    - `youtubeId` — the part after `watch?v=` or `youtu.be/` in the link
    - `title` / `artist`
    - `lyrics` — an array of lines, one per string
+
+   A friendly working placeholder ("Perfect" by Ed Sheeran) is set so the player
+   is never empty — replace it with your own song any time.
 2. **The handmade tracks** — edit `js/tracks-data.js` (title, mood, tempo,
    scale, progression, seed).
 
