@@ -309,6 +309,12 @@ const OUR_SONG = {
 
     updateNowPlaying(null);
     startEqualizer();
+
+    if ("serviceWorker" in navigator) {
+      window.addEventListener("load", () => {
+        navigator.serviceWorker.register("sw.js").catch(() => {});
+      });
+    }
   }
 
   if (document.readyState === "loading") {
