@@ -44,6 +44,21 @@
   font-size: 2.4rem;
 }
 
+.embed-link {
+  display: block;
+  max-width: 720px;
+  margin: 10px auto 0;
+  color: var(--muted);
+  font-size: 0.85rem;
+  text-align: center;
+  text-decoration: none;
+}
+
+.embed-link:hover {
+  color: var(--text);
+  text-decoration: underline;
+}
+
 .settings-note {
   color: var(--muted);
   font-size: 0.9rem;
