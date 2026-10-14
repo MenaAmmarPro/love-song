@@ -9,16 +9,19 @@
  */
 
 /* ------------------------------------------------------------------ *
- * Your real song — fill these in whenever you like.
+ * Our song.
  *
  *   youtubeId : the bit after "watch?v=" or "youtu.be/" in a YouTube link
  *               (e.g. https://youtu.be/dQw4w9WgXcQ -> "dQw4w9WgXcQ")
  *   lyrics    : any lines you want shown in the Lyrics section
+ *
+ * NOTE: the value below is a friendly placeholder ("Perfect" by Ed Sheeran)
+ * so the player is never empty. Swap it for your real song whenever you like.
  * ------------------------------------------------------------------ */
 const OUR_SONG = {
-  title: "Our song",
-  artist: "",
-  youtubeId: "",
+  title: "Perfect",
+  artist: "Ed Sheeran",
+  youtubeId: "2Vv-BfVoq4g",
   lyrics: []
 };
 
@@ -59,6 +62,15 @@ const OUR_SONG = {
       if (els.embedNote) {
         const who = OUR_SONG.artist ? " — " + OUR_SONG.artist : "";
         els.embedNote.textContent = OUR_SONG.title + who;
+      }
+      const link = document.createElement("a");
+      link.className = "embed-link";
+      link.href = "https://www.youtube.com/watch?v=" + encodeURIComponent(OUR_SONG.youtubeId);
+      link.target = "_blank";
+      link.rel = "noopener noreferrer";
+      link.textContent = "Open on YouTube ↗";
+      if (els.embed.parentNode) {
+        els.embed.parentNode.insertBefore(link, els.embed.nextSibling);
       }
     } else {
       const ph = document.createElement("div");
